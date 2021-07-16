@@ -1,0 +1,13 @@
+.container-header {
+    flex: 1;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.6rem;
+
+    background-color: aqua;
+    
+    font-size: 1.2rem;
+}
