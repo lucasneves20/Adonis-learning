@@ -20,6 +20,11 @@ trazida por padrão no Adonis, no caso é o framework Edge (não conhecê-lo mos
 o quão limitado ele é em relação ao React ou Angular), nesse caso não precisa
 por isso podemos apenas usar a arquitetura MC (Model Controller)
 
+Entre as suas principais características está o Lucid dito como o mais poderoso 
+ORM feito para node, é marcante codar com esse ORM que entre minhas poucas experiencias
+é o que mais gostei de usar ao longo do tempo, não é muito complexo e é bastante escalável,
+mostrarei um pouco mais do seu poder mais tarde
+
 ### Bora codar
 
 1. Para começarmos qualquer projeto em Adonis primeiro temos que instalar o
