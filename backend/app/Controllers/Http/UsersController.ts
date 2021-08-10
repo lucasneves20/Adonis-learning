@@ -16,24 +16,21 @@ export default class UsersController {
     }
 
     public async showUserNativeSQL({}: HttpContextContract) {
-        // linha que retorna no Get de forma verbosa, além do esperado
-        // (ainda em análise para saber o porque desse comportamento)
-        // const users = await Database.rawQuery( `select * from users;`);
-
+        /* método + ou - nativo que é imune a SQL Injection */
         const users = await Database.query().select("*").from("users");
 
         return users;
     }
 
     public async create({ request }: HttpContextContract) {
-        const data = request.only(["name", "email", "password"]);
+        const data = request.only(["name", "email", "password", "admin"]);
 
         const user = await User.create(data);
 
         return user;
     }
 
-    public async showAllUsers({ params }: HttpContextContract) {
+    public async showAllUsersById({ params }: HttpContextContract) {
         const user = await User.findOrFail(params.id);
 
         return user;
@@ -41,7 +38,7 @@ export default class UsersController {
 
     public async update({ params, request }: HttpContextContract) {
         const user = await User.findOrFail(params.id);
-        const data = request.only(["name", "email", "password"]);
+        const data = request.only(["name", "email", "password", "admin"]);
 
         user.merge(data);
 
@@ -54,5 +51,7 @@ export default class UsersController {
         const user = await User.findOrFail(params.id);
 
         await user.delete();
+
+        return `user ${params.id} deleted`;
     }
 }
