@@ -16,7 +16,7 @@ export default class UsersController {
     }
 
     public async showUserNativeSQL({}: HttpContextContract) {
-        /* método + ou - nativo que é imune a SQL Injection */
+        /* método + ou - nativo do SQL que é imune a SQL Injection */
         const users = await Database.query().select("*").from("users");
 
         return users;

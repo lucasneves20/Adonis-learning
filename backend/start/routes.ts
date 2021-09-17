@@ -34,6 +34,8 @@ Route.get("/", async () => {
 });
 
 Route.get("/users", "UsersController.showUser");
+
+// para fins didáticos  
 Route.get("/users/sql", "UsersController.showUserNativeSQL");
 
 Route.post("/users", "UsersController.create");
