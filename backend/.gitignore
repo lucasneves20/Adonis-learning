@@ -1,9 +1,9 @@
 node_modules
 build
 coverage
+.vs
 .vscode
 .DS_STORE
 .env
 .idea
 tmp
-.vs
