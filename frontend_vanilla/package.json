@@ -1,0 +1,24 @@
+{
+  "name": "frontend_vanilla",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "license": "MIT",
+  "scripts": {
+    "production": "pm2 start ./public/server.js && pm2 monit",
+    "monit-master": "pm2 plus",
+    "reload": "pm2 reload ./public/server.js",
+    "dev": "ts-node-dev --inspect -- src/server.ts",
+    "build": "tsc ./src/server.ts --declaration --outDir ./public"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pm2": "^5.1.2",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8"
+  }
+}
