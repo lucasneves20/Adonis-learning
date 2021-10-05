@@ -52,3 +52,5 @@ Backend que ficou assim
 ```
 yarn create adonis-ts-app Backend
 ```
+
+> Ainda está em desenvolvimento, o back-end já pode ser testado mas o frontend ainda está incompleto
